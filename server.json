@@ -23,6 +23,14 @@
       "price": "25.90",
       "available": true,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
+    },
+    {
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png",
+      "name": "Comida italiano",
+      "price": "29,90",
+      "description": "comida muito gostosa",
+      "id": 4,
+      "available": true
     }
   ]
 }
