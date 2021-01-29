@@ -47,6 +47,7 @@
     "ts-jest": "^26.0.0"
   },
   "scripts": {
+    "dev:server": "json-server server.json -p 3333 -w",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
