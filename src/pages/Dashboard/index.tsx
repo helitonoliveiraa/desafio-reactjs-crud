@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { domainToUnicode } from 'url';
 import Header from '../../components/Header';
 
 import api from '../../services/api';

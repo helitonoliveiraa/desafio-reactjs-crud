@@ -8,6 +8,10 @@ export default createGlobalStyle`
     outline: 0;
   }
 
+  html {
+    font-size: 62.5%; /* 1rem to equal 10px */
+  }
+
   body {
     background: #fff;
     color: #FFF;

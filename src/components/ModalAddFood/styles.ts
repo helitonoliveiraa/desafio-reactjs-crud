@@ -42,3 +42,16 @@ export const Form = styled(Unform)`
     }
   }
 `;
+
+export const InputWrapper = styled.aside`
+  display: flex;
+  align-items: center;
+  margin: 2.4rem 0;
+  width: 100%;
+
+  div {
+    input {
+      width: 2rem;
+    }
+  }
+`;

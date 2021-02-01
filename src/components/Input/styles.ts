@@ -7,13 +7,16 @@ interface IContainerProps {
 
 export const Container = styled.div<IContainerProps>`
   display: flex;
+  flex: 1;
   align-items: center;
 
   background: #fff;
+  border: 2px solid #fff;
   border-radius: 8px;
   padding: 18px 24px;
   width: 100%;
   font-size: 16px;
+  color: #b7b7cc;
 
   & + div {
     margin-top: 24px;
