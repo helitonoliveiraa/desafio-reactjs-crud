@@ -40,7 +40,7 @@ const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          background: currenTheme.colors.background,
+          background: currenTheme.colors.backgroundCard,
           color: currenTheme.colors.titleCard,
           borderRadius: '8px',
           width: '85.6rem',
