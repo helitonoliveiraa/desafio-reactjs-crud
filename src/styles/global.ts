@@ -13,14 +13,14 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #fff;
-    color: #FFF;
+    background: ${({ theme }) => theme.colors.write};
+    color: ${({ theme }) => theme.colors.write};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, button {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
