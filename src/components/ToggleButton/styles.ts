@@ -8,8 +8,4 @@ export const Container = styled.button`
   background: none;
 
   margin-right: 4.6rem;
-
-  svg {
-    color: '#FFF';
-  }
 `;

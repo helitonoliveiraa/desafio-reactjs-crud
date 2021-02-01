@@ -8,14 +8,32 @@ interface ITheme {
   currenTheme: typeof dark | typeof light;
 }
 
+interface IThemes {
+  theme: Omit<ITheme, 'toggleTheme'>;
+}
+
 const ThemeContext = createContext({} as ITheme);
 
 export const AppThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = useState(() => {
+    const loadedTheme = localStorage.getItem('@theme:');
+
+    if (loadedTheme) {
+      return JSON.parse(loadedTheme);
+    }
+
+    return light;
+  });
 
   const toggleTheme = useCallback(() => {
     setTheme(theme.title === 'light' ? dark : light);
-  }, [theme.title]);
+
+    if (theme.title === 'light') {
+      localStorage.setItem('@theme:', JSON.stringify(dark));
+    } else {
+      localStorage.setItem('@theme:', JSON.stringify(light));
+    }
+  }, [theme]);
 
   const currenTheme = theme;
 
