@@ -8,10 +8,6 @@ interface ITheme {
   currenTheme: typeof dark | typeof light;
 }
 
-interface IThemes {
-  theme: Omit<ITheme, 'toggleTheme'>;
-}
-
 const ThemeContext = createContext({} as ITheme);
 
 export const AppThemeProvider: React.FC = ({ children }) => {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import ReactModal from 'react-modal';
+import { useTheme } from '../../context/theme';
 
 interface IFoodPlate {
   id: number;
@@ -19,6 +20,7 @@ interface IModalProps {
 
 const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
   const [modalStatus, setModalStatus] = useState(isOpen);
+  const { currenTheme } = useTheme();
 
   useEffect(() => {
     setModalStatus(isOpen);
@@ -38,8 +40,8 @@ const Modal: React.FC<IModalProps> = ({ children, isOpen, setIsOpen }) => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
-          background: '#F0F0F5',
-          color: '#000000',
+          background: currenTheme.colors.background,
+          color: currenTheme.colors.titleCard,
           borderRadius: '8px',
           width: '85.6rem',
           border: 'none',
