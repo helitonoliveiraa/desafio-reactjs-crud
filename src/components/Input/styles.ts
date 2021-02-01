@@ -6,54 +6,54 @@ interface IContainerProps {
 }
 
 export const Container = styled.div<IContainerProps>`
-  display: flex;
-  flex: 1;
-  align-items: center;
+  ${({ theme, isFocused, isFilled }) => css`
+    display: flex;
+    flex: 1;
+    align-items: center;
 
-  background: #fff;
-  border: 2px solid #fff;
-  border-radius: 8px;
-  padding: 18px 24px;
-  width: 100%;
-  font-size: 16px;
-  color: #b7b7cc;
+    background: ${theme.colors.write};
+    border: 2px solid ${theme.colors.write};
+    border-radius: 8px;
+    padding: 18px 24px;
+    width: 100%;
+    font-size: 16px;
+    color: ${theme.colors.inputs};
 
-  & + div {
-    margin-top: 24px;
-  }
+    & + div {
+      margin-top: 24px;
+    }
 
-  h1 {
-    margin-bottom: 40px;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 36px;
-  }
+    h1 {
+      margin-bottom: 40px;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 36px;
+    }
 
-  ${props =>
-    props.isFocused &&
+    ${isFocused &&
     css`
-      color: #ff9000;
-      border-color: #ff9000;
+      color: ${theme.colors.focus};
+      border-color: ${theme.colors.focus};
     `}
 
-  ${props =>
-    props.isFilled &&
+    ${isFilled &&
     css`
-      color: #ff9000;
+      color: ${theme.colors.focus};
     `}
 
   input {
-    flex: 1;
-    background: transparent;
-    border: 0;
-    color: #b7b7cc;
+      flex: 1;
+      background: transparent;
+      border: 0;
+      color: ${theme.colors.inputs};
 
-    &::placeholder {
-      color: #b7b7cc;
+      &::placeholder {
+        color: ${theme.colors.inputs};
+      }
     }
-  }
 
-  svg {
-    margin-right: 16px;
-  }
+    svg {
+      margin-right: 16px;
+    }
+  `}
 `;
