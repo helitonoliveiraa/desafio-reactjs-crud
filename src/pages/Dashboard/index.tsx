@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 import Header from '../../components/Header';
 
@@ -24,6 +25,10 @@ const Dashboard: React.FC = () => {
   const [editingFood, setEditingFood] = useState<IFoodPlate>({} as IFoodPlate);
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
+
+  const themeContext = useContext(ThemeContext);
+
+  console.log(themeContext);
 
   useEffect(() => {
     async function loadFoods(): Promise<void> {

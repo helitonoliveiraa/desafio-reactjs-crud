@@ -15,31 +15,35 @@ export const Container = styled.div`
 
       nav {
         div {
-          button {
-            font-weight: 600;
-            border-radius: 8px;
-            border: 0;
-            background: ${theme.colors.positive};
-            color: ${theme.colors.write};
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            .text {
-              padding: 16px 24px;
-            }
-
-            .icon {
-              display: flex;
-              padding: 16px 16px;
-              background: ${theme.colors.positive};
-              border-radius: 0 8px 8px 0;
-              margin: 0 auto;
-            }
-          }
+          display: flex;
         }
       }
+    }
+  `}
+`;
+
+export const Button = styled.button`
+  ${({ theme }) => css`
+    font-weight: 600;
+    border-radius: 8px;
+    border: 0;
+    background: ${theme.colors.positive};
+    color: ${theme.colors.write};
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .text {
+      padding: 16px 24px;
+    }
+
+    .icon {
+      display: flex;
+      padding: 16px 16px;
+      background: ${theme.colors.positive};
+      border-radius: 0 8px 8px 0;
+      margin: 0 auto;
     }
   `}
 `;
