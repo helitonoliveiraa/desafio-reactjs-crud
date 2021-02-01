@@ -1,4 +1,6 @@
 export default {
+  title: 'light',
+
   colors: {
     primary: '#C72828',
     secondary: '#FFB84D',
@@ -11,5 +13,10 @@ export default {
     card: '#F0F0F5',
     cardFaixa: '#E4E4EB',
     inputs: '#B7B7CC',
+    background: '#FFFFFF',
+
+    backgroundCard: '#f0f0f5',
+    titleCard: '#3d3d4d',
+    cardButton: '#FFFFFF',
   },
 };
