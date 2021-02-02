@@ -1,8 +1,14 @@
 import React, { useRef, useCallback } from 'react';
 
-import { FiCheckSquare } from 'react-icons/fi';
+import {
+  FiCheckSquare,
+  FiDollarSign,
+  FiFileText,
+  FiLink2,
+} from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
-import { Form } from './styles';
+import { IoFastFoodOutline } from 'react-icons/io5';
+import { Form, InputWrapper } from './styles';
 import Modal from '../Modal';
 import Input from '../Input';
 
@@ -51,12 +57,24 @@ const ModalEditFood: React.FC<IModalProps> = ({
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <Form ref={formRef} onSubmit={handleSubmit} initialData={editingFood}>
         <h1>Editar Prato</h1>
-        <Input name="image" placeholder="Cole o link aqui" />
+        <Input icon={FiLink2} name="image" placeholder="Cole o link aqui" />
 
-        <Input name="name" placeholder="Ex: Moda Italiana" />
-        <Input name="price" placeholder="Ex: 19.90" />
+        <InputWrapper>
+          <Input
+            icon={IoFastFoodOutline}
+            name="name"
+            placeholder="Ex: Moda Italiana"
+          />
 
-        <Input name="description" placeholder="Descrição" />
+          <Input
+            containerStyle={{ maxWidth: 200, marginTop: 0, marginLeft: 16 }}
+            icon={FiDollarSign}
+            name="price"
+            placeholder="Ex: 19.90"
+          />
+        </InputWrapper>
+
+        <Input icon={FiFileText} name="description" placeholder="Descrição" />
 
         <button type="submit" data-testid="edit-food-button">
           <div className="text">Editar Prato</div>
