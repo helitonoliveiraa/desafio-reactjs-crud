@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components';
+import { lighten } from 'polished';
 
 interface IContainerProps {
   isFocused: boolean;
   isFilled: boolean;
+  isErrored: boolean;
 }
 
 export const Container = styled.div<IContainerProps>`
-  ${({ theme, isFocused, isFilled }) => css`
+  ${({ theme, isFocused, isFilled, isErrored }) => css`
     display: flex;
     flex: 1;
     align-items: center;
@@ -29,6 +31,11 @@ export const Container = styled.div<IContainerProps>`
       font-size: 36px;
       line-height: 36px;
     }
+
+    ${isErrored &&
+    css`
+      border-color: ${lighten(0.2, theme.colors.primary)};
+    `}
 
     ${isFocused &&
     css`

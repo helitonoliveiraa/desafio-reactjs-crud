@@ -8,9 +8,13 @@ import {
 } from 'react-icons/fi';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import { FormHandles } from '@unform/core';
-import { Form, InputWrapper } from './styles';
+import * as Yup from 'yup';
+import getValidationErrors from '../../utils/validationErros';
+
 import Modal from '../Modal';
 import Input from '../Input';
+
+import { Form, InputWrapper } from './styles';
 
 interface IFoodPlate {
   id: number;
@@ -43,9 +47,26 @@ const ModalAddFood: React.FC<IModalProps> = ({
 
   const handleSubmit = useCallback(
     async (data: ICreateFoodData) => {
-      handleAddFood(data);
+      try {
+        formRef.current?.setErrors({});
 
-      setIsOpen();
+        const schema = Yup.object().shape({
+          name: Yup.string().required(),
+          image: Yup.string().required(),
+          price: Yup.string().required(),
+          description: Yup.string().required(),
+        });
+
+        await schema.validate(data, { abortEarly: false });
+
+        handleAddFood(data);
+
+        setIsOpen();
+      } catch (err) {
+        const errors = getValidationErrors(err);
+
+        formRef.current?.setErrors(errors);
+      }
     },
     [handleAddFood, setIsOpen],
   );
