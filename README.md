@@ -19,7 +19,7 @@
 <br />
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1612441982/go-restaurant/image_ghomgo.png" alt="GoRestaurant" />
+  <img src="./.github/image.png" alt="GoRestaurant" />
 </p>
 
 <br />
