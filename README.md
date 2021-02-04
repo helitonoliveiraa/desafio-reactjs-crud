@@ -1,28 +1,28 @@
 <h1 align="center">Challenge 10: GoRestaurant</h1>
 
 <p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/helitonoliveiraa/desafio-reactjs-crud.svg">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/helitonoliveiraa/desafio-reactjs-crud.svg?color=%2339b100">
+
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/helitonoliveiraa/desafio-reactjs-crud?color=%23C72828">
 
   <a href="https://www.linkedin.com/in/helitonoliveira/">
-    <img alt="Made by Héliton Oliveira" src="https://img.shields.io/badge/made%20by-Héliton Oliveira-%23C72828">
+    <img alt="Made by Héliton Oliveira" src="https://img.shields.io/badge/made%20by-Héliton Oliveira-%238257e6">
   </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%23C72828">
 
   <a href="https://github.com/helitonoliveiraa/desafio-reactjs-crud/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/helitonoliveiraa/desafio-reactjs-crud?style=social">
   </a>
 </p>
 
+<br />
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1612277512/go-restaurant/image1_gguj6u.png" alt="GoRestaurant" />
+  <img src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1612441982/go-restaurant/image_ghomgo.png" alt="GoRestaurant" />
 </p>
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1612277516/go-restaurant/image2_skys69.png" alt="GoRestaurant" />
-</p>
-
+<br />
 
 <a href="https://gorestaurant-10.netlify.app/">
   <p align="center">
@@ -30,9 +30,7 @@
 </p>
 </a>
 
-
-
-# :memo: About
+## :memo: About
 
 For this challenge, I developed the GoRestaurant web application for practices that I learned on Reactjs with Typescript and application concepts of `CRUD` (Create, Read, Update, Delete).
 
